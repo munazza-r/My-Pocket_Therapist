@@ -3,12 +3,13 @@
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\SignUpController;
 use App\Http\Controllers\MoodController;
+use App\Http\Controllers\AboutController;
 use Illuminate\Support\Facades\Auth;
 
 // Home route
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 // Login
 Route::get('/login', [LoginController::class, 'LoginForm'])->name('login');
@@ -24,6 +25,9 @@ Route::get('/dashboard', function () {
 Route::get('/signup', [SignUpController::class, 'SignUpForm'])->name('register');
 Route::post('/signup', [SignUpController::class, 'auth_signup']);
 
+// About
+Route::get('/about', [AboutController::class, 'index'])->name('about');
+
 // Forgot Password
 Route::get('/forgot-password', function () {
     return view('auth.forgot-password');
@@ -34,9 +38,9 @@ Route::get('/mood-tracker', [MoodController::class, 'index'])->name('mood_tracke
 Route::post('/mood-tracker', [MoodController::class, 'store'])->name('mood.store')->middleware('auth');
 Route::get('/mood-history', [MoodController::class, 'history'])->name('mood.history')->middleware('auth');
 
-Route::get('/journal-entry', function () {
-    return view('features.journal-entry');
-})->name('journal_entry')->middleware('auth');
+Route::get('/journal-entry', [App\Http\Controllers\JournalController::class, 'index'])->name('journal_entry')->middleware('auth');
+Route::post('/journal-entry', [App\Http\Controllers\JournalController::class, 'store'])->name('journal.store')->middleware('auth');
+Route::delete('/journal-entry/{journal}', [App\Http\Controllers\JournalController::class, 'destroy'])->name('journal.destroy')->middleware('auth');
 
 Route::get('/appointment-booking', function () {
     return view('features.appointment-booking');
@@ -65,5 +69,16 @@ Route::get('/reminders', function () {
 Route::get('/breathing-exercise', function () {
     return view('features.breathing-exercise');
 })->name('breathing_exercise')->middleware('auth');
+ 
+// breathing exercises
+Route::get('/4-7-8',function() {
+    return view('features.4-7-8');
+})->name('4-7-8')->middleware('auth');
 
+Route::get('/box-breathing',function() {
+    return view('features.box-breathing');
+})->name('box-breathing')->middleware('auth');
 
+Route::get('/cyclic-sighing',function() {
+    return view('features.cyclic-sighing');
+})->name('cyclic-sighing')->middleware('auth');

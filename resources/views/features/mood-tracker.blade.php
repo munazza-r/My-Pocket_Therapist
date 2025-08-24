@@ -269,7 +269,6 @@
                 <img src="{{ asset('images/mpt_logo.png') }}" alt="My Pocket Therapist Logo">
             </div>
             <div class="nav-links">
-                <a href="{{ route('dashboard') }}">Dashboard</a>
                 <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
@@ -358,7 +357,6 @@
     <script>
         let selectedMood = null;
         
-        // Set CSRF token for AJAX requests
         $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -366,12 +364,10 @@
         });
         
         function selectMood(element, mood) {
-            // Remove selected class from all options
             document.querySelectorAll('.mood-option').forEach(option => {
                 option.classList.remove('selected');
             });
             
-            // Add selected class to clicked option
             element.classList.add('selected');
             selectedMood = mood;
         }
@@ -394,7 +390,6 @@
                 return;
             }
             
-            // Get the description for the selected mood
             const moodDescriptions = {
                 'Happy': 'Feeling good and positive',
                 'Calm': 'Peaceful and relaxed',
@@ -419,16 +414,13 @@
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    // Show success message
                     showMessage('Mood saved successfully!', 'success');
                     
-                    // Reset selection
                     document.querySelectorAll('.mood-option').forEach(option => {
                         option.classList.remove('selected');
                     });
                     selectedMood = null;
                     
-                    // Refresh mood history
                     loadMoodHistory();
                 } else {
                     showMessage('Error saving mood. Please try again.', 'error');

@@ -244,11 +244,11 @@
                 <img src="{{ asset('images/mpt_logo.png') }}" alt="My Pocket Therapist Logo">
             </div>
             <div class="nav-links">
-                <a href="#about">About</a>
+                <a href="{{ route('about') }}">About</a>
                 <a href="{{ route('login') }}">Already a member?</a>
                 <a href="{{ route('register') }}">New to Therapy?</a>
             </div>
-                </nav>
+            </nav>
         </header>
 
     <main>

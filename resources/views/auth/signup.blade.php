@@ -264,7 +264,7 @@
                     <button type="submit" class="btn">Sign Up</button>
                 </form>
                 <div class="login-link">
-                    Already have an account? <a href="{{ route('login') }}">Login</a>
+                    <a href="{{ route('login') }}">Already have an account? Login</a>
                 </div>
                 <div class="back-link">
                     <a href="{{ url('/') }}">← Back to Home</a>

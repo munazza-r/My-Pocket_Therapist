@@ -230,7 +230,10 @@
             <div class="user-menu">
                 <a href="#profile">Profile</a>
                 <a href="#settings">Settings</a>
-                <a href="{{ route('logout') }}">Logout</a>
+                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
             </div>
         </nav>
     </header>
@@ -262,11 +265,6 @@
                 <h3>Peer Support</h3>
                 <p>Connect with others on similar journeys.</p>
             </a>
-            <a href="{{ route('daily_emotion_log') }}" class="nav-item">
-                <div class="nav-icon">📊</div>
-                <h3>Daily Emotion Log</h3>
-                <p>Track your emotional patterns.</p>
-            </a>
             <a href="{{ route('daily_tips') }}" class="nav-item">
                 <div class="nav-icon">💡</div>
                 <h3>Daily Inspiration</h3>
@@ -292,7 +290,6 @@
     </main>
 
     <script>
-        // Simple mood selection
         document.querySelectorAll('.mood-option').forEach(option => {
             option.addEventListener('click', function() {
                 document.querySelectorAll('.mood-option').forEach(opt => opt.classList.remove('selected'));

@@ -233,7 +233,7 @@
                     <button type="submit" class="btn">Login</button>
                 </form>
                 <div class="signup-link">
-                    Don't have an account? <a href="{{ route('register') }}">Sign Up</a>
+                    <a href="{{ route('register') }}">Don't have an account? Sign Up</a>
                 </div>
                 <div class="back-link">
                     <a href="{{ url('/') }}">← Back to Home</a>

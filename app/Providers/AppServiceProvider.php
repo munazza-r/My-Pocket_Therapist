@@ -20,7 +20,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // Register the getMoodEmoji helper function
         \Blade::directive('moodEmoji', function ($expression) {
             return "<?php echo App\Helpers\MoodHelper::getMoodEmoji($expression); ?>";
         });

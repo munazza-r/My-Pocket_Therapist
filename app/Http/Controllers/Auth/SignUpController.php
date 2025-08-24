@@ -22,16 +22,14 @@ class SignUpController extends Controller
             'password' => 'required|min:6|confirmed'
         ]);
 
-        // Create user
         $user = User::create([
             'name'     => $request->name,
             'email'    => $request->email,
             'password' => Hash::make($request->password),
         ]);
 
-        // Optionally login the user
         auth()->login($user);
 
-        return redirect('/dashboard'); // or home page
+        return redirect('/dashboard');
     }
 }
