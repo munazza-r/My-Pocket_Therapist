@@ -13,9 +13,13 @@ auth.json
 npm-debug.log
 yarn-error.log
 /public/build
-/storage/framework/cache
-/storage/framework/sessions
+/storage/framework/cache/*
+!/storage/framework/cache/.gitkeep
+/storage/framework/sessions/*
+!/storage/framework/sessions/.gitkeep
 /storage/framework/testing
-/storage/framework/views
-/storage/logs
+/storage/framework/views/*
+!/storage/framework/views/.gitkeep
+/storage/logs/*
+!/storage/logs/.gitkeep
 /bootstrap/cache
