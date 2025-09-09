@@ -1,4 +1,4 @@
-# 🌸 My Pocket Therapist  
+# My Pocket Therapist 🌼
 
 A supportive and user-friendly mental health platform offering support for those who need it, at the click of a button.  
 
