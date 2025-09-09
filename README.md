@@ -34,14 +34,7 @@ Once logged in, users see **8 interactive features**:
 - Peer reviewed articles on mental health issues to help you understand your own problems better or to understand a loved one who is struggling.
 
 #### 7. Daily Reminders  
-- Add reminders with:
-  - Title, optional description, due date/time (default: 11:59 PM).  
-- Features:
-  - Edit, mark complete, or delete reminders.  
-  - Smart time alerts:
-    - “Due in X mins” (if <30 mins left)  
-    - “Due now” (if <1 min left)  
-    - “Overdue” (turns red if missed).  
+- Use reminders to keep track of your daily goals. 
 
 #### 8. Breathing Exercises  
 - Guided steps for various breathing exercises to help calm your nerves.
