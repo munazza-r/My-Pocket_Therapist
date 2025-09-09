@@ -1,67 +1,37 @@
 # 🌸 My Pocket Therapist  
 
-> A supportive and user-friendly mental health platform offering mood tracking, journaling, appointment booking, peer support, and more — all in one place.  
+A supportive and user-friendly mental health platform offering support for those who need it, at the click of a button.  
 
 ---
 
-## 📑 Table of Contents
-1. [✨ Features](#-features)
-2. [👩‍⚕️ Our Team](#-our-team)
-3. [🎨 Frontend Design](#-frontend-design)
-4. [🚧 Current Limitations](#-current-limitations)
-5. [🛠️ Tech Stack](#️-tech-stack)
-6. [🚀 How to Run Locally](#-how-to-run-locally)
-7. [🤝 Future Roadmap](#-future-roadmap)
-8. [📜 License](#-license)
-
----
-
-## ✨ Features
+## Features
 
 ### 🔐 Authentication
 - **Sign Up & Login:** Create and access a secure account.  
-- **Forgot Password:** Currently a placeholder feature:
-  - Prompts user for email and checks if it exists.  
-  - Displays “reset link sent” or “no user found.”  
-  - Reset links are **not functional yet** as email services aren’t configured.  
-- **Profile Settings:** Change password, delete account, view booked appointments.  
-- **Logout** button available at the top-right of the dashboard.  
-
 ---
 
 ### 🏠 Dashboard
-Once logged in, users see **8 interactive feature cards**:  
+Once logged in, users see **8 interactive features**:  
 
 #### 1. Mood Tracker  
-- Choose from **6 moods**: 😊 Happy, 😌 Calm, 😐 Neutral, 😔 Sad, 😰 Anxious, 😡 Angry.  
-- Saves moods with **date and time**.  
-- Recent mood history shows the **last 10 entries**.
+- Choose from **6 moods** to express how you feel: 😊 Happy, 😌 Calm, 😐 Neutral, 😔 Sad, 😰 Anxious, 😡 Angry.   
+- View recent mood history.
 
 #### 2. Personal Journal  
-- Write and save your thoughts with **date and time**.  
-- Delete previous entries.  
-- *(Future plan: Add “Edit” button for entries.)*
+- Write and save your thoughts. 
+- View or delete previous journal entries.
 
 #### 3. Book Therapy Appointment  
-- View **5 doctors** with:
-  - Name, picture, title (Psychiatrist/Counselor/Psychologist), specialization, and location.  
-- Book sessions **Sunday to Thursday, 12 PM – 7 PM**.  
-- Add optional notes during booking.  
-- *(Future plan: Add more doctors.)*
+- Reach out to one of our professionals by booking an therapy session.
 
 #### 4. Peer Support Forums  
-- Categories: ADHD Support, Depression Support, Grief & Loss, Trauma Recovery.  
-- Users can create posts and comment.  
-- *(Future plan: Add more forums.)*
+- Find your people and get to know others who share your struggles
 
 #### 5. Daily Inspiration  
-- Randomly displays **1 of 20 uplifting images/messages** on refresh.  
-- *(Future plan: Expand message/image library.)*
+- New positive messages for you whenevr you feel low.
 
 #### 6. Learn & Grow (Articles)  
-- Browse **20 educational articles** by theme (Anxiety, Depression, Therapy, Mindfulness, Trauma, All Topics).  
-- Search by **keyword, title, or theme**.  
-- *(Future plan: Add more articles.)*
+- Peer reviewed articles on mental health issues to help you understand your own problems better or to understand a loved one who is struggling.
 
 #### 7. Daily Reminders  
 - Add reminders with:
@@ -74,49 +44,19 @@ Once logged in, users see **8 interactive feature cards**:
     - “Overdue” (turns red if missed).  
 
 #### 8. Breathing Exercises  
-- Guided steps for:
-  - 4-7-8 Method  
-  - Box Breathing  
-  - Cyclic Sighing  
-- *(Future plan: Add visual timers.)*
+- Guided steps for various breathing exercises to help calm your nerves.
 
 ---
 
-## 👩‍⚕️ Our Team
-- **Mental Health Professionals**  
-  Licensed therapists, psychologists, and counselors dedicated to your well-being.  
-- **Technology Experts**  
-  Developers and designers creating intuitive, secure, and accessible platforms.  
-- **Support Specialists**  
-  Compassionate team members assisting every step of the way.  
-- **Research & Development**  
-  Experts improving services based on the latest mental health research.  
-
----
-
-## 🎨 Frontend Design
-- Cute, colorful, and inviting user interface.  
-- Feature cards **pop up on hover**; buttons **change color on hover**.  
-
----
-
-## 🚧 Current Limitations
-- Password reset email system is **not functional yet** (requires hosting).  
-- Limited doctors, articles, and forums.  
-- Journal entries cannot be edited yet.  
-- Breathing exercises lack visual timers (planned feature).
-
----
-
-## 🛠️ Tech Stack
+## 🔧 Tech Stack
 - **Frontend:** HTML, CSS (custom styling and hover effects)  
-- **Backend:** PHP (Laravel or raw PHP scripts)  
+- **Backend:** PHP (Laravel and raw PHP scripts)  
 - **Database:** MySQL  
-- **Hosting:** Planned for deployment with email integration.  
 
 ---
 
-## 🚀 How to Run Locally
+## ⚙️ How to Run Locally
+
 1. Clone the repository:  
    ```bash
    git clone https://github.com/your-username/my-pocket-therapist.git
@@ -133,4 +73,16 @@ php artisan serve
 ```
 
 
+## 🚀 Future Improvements:
+- Host the website for internet wide access.
+- Email integration for password resets.
+- Invite more professional to join our team
+- Add more relevant peer reviewed articles.
+- Create more support forums for a wider range of mental health issues
+- Add journal editing functionality.
+- Introduce breathing exercise visual cues.
+
+**Developed by [Munazza Binte Rafiq](https://github.com/munazza-r). Go check out my profile!**
+
+**If you like this project, ⭐ the repo and share with friends!**
 
